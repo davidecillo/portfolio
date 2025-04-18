@@ -1,12 +1,33 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Works() {
   const projects = [
-    { id: 1, image: "/Projects/PawPal - Cover.jpg", title: "PawPal" },
-    { id: 2, image: "/Projects/Spotify Rebranding - Main Pages.jpg", title: "Spotify Rebranding" },
-    { id: 3, image: "/Projects/Cineverse.jpg", title: "CineVerse" },
-    { id: 4, image: "/Projects/Porsche.jpg", title: "Porsche App" }
+    {
+      id: 1,
+      image: "/Projects/PawPal - Cover.jpg",
+      title: "PawPal",
+      path: "PawPal",
+    },
+    {
+      id: 2,
+      image: "/Projects/Spotify Rebranding - Main Pages.jpg",
+      title: "Spotify Rebranding",
+      path: "Spotify",
+    },
+    {
+      id: 3,
+      image: "/Projects/Cineverse.jpg",
+      title: "CineVerse",
+      path: "CineVerse",
+    },
+    {
+      id: 4,
+      image: "/Projects/Porsche.jpg",
+      title: "Porsche App",
+      path: "Porsche",
+    },
   ];
 
   return (
@@ -17,8 +38,9 @@ export default function Works() {
       <div className="relative w-full flex items-center justify-start overflow-hidden mb-16">
         <div className="flex space-x-6 pr-6 overflow-x-scroll snap-x snap-mandatory scroll-smooth scrollbar-hide">
           {projects.map((project) => (
-            <div
+            <Link
               key={project.id}
+              href={`/works/${project.path}`}
               className="snap-start flex-shrink-0 h-[60vh] aspect-[4/3] relative shadow-xl overflow-hidden"
             >
               <Image
@@ -28,7 +50,7 @@ export default function Works() {
                 className="object-cover"
                 quality={100}
               />
-            </div>
+            </Link>
           ))}
         </div>
       </div>
