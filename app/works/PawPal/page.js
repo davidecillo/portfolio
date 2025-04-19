@@ -1,11 +1,7 @@
-"use client"
+"use client";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useState } from "react";
-
-const images = [
-  "/Projects/PawPal - hand mockup.png",
-];
 
 export default function PawPal() {
   const [current, setCurrent] = useState(0);
@@ -21,12 +17,12 @@ export default function PawPal() {
       <section className="px-8 py-24 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed space-y-10">
         <div>
           <h1 className="text-4xl font-bold text-[#292c34] mb-2">PawPal</h1>
-          <p className="text-gray-500 mb-4">February 2025</p>
+          <p className="text-gray-500 mb-4">October 2024</p>
           <p>
-            PawPal is a mobile-first app designed to help dog owners collect,
-            share, and revisit their best moments with their furry friends.
-            Users can keep a memory diary, organize their dog’s information, and
-            interact with a clean and playful interface.
+            PawPal is an app designed for new dog owners, providing training
+            advice, breed insights and behavioral tips. Users can track their
+            dog’s milestones, explore daily suggestions, and access helpful
+            comments to improve pet care and well-being.
           </p>
         </div>
 
@@ -36,35 +32,35 @@ export default function PawPal() {
           </h2>
           <ul className="list-disc list-inside">
             <li>Figma</li>
-            <li>Next.js (structure & routing)</li>
-            <li>React (for future implementation)</li>
           </ul>
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold text-[#292c34] mb-4">
+          <h2 className="text-2xl font-semibold text-[#292c34] mb-6">
             Gallery
           </h2>
-          <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-lg">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
             <Image
-              src={images[current]}
-              alt={`PawPal screenshot ${current + 1}`}
-              layout="fill"
-              objectFit="cover"
-              className="transition-all duration-500"
+              src="/Projects/PawPal/PawPal - cover.jpg"
+              alt="PawPal cover"
+              width={500}
+              height={300}
+              className=""
             />
-            <button
-              onClick={prevImage}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow"
-            >
-              ◀
-            </button>
-            <button
-              onClick={nextImage}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow"
-            >
-              ▶
-            </button>
+            <Image
+              src="/Projects/PawPal/PawPal - hand mockup.png"
+              alt="PawPal hand mockup"
+              width={500}
+              height={300}
+              className="object-cover"
+            />
+            <Image
+              src="/Projects/PawPal/All Pages.jpg"
+              alt="PawPal all pages"
+              width={500}
+              height={300}
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
