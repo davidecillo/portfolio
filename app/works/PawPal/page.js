@@ -4,66 +4,114 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function PawPal() {
-  const [current, setCurrent] = useState(0);
-
-  const prevImage = () =>
-    setCurrent((current - 1 + images.length) % images.length);
-  const nextImage = () => setCurrent((current + 1) % images.length);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const closeModal = () => setSelectedImage(null);
 
   return (
     <main className="flex flex-col items-center pt-8 min-h-screen bg-gray-50 overflow-x-hidden">
-      <Navbar />
+      <div
+        className={
+          selectedImage
+            ? "blur-sm transition-all duration-300"
+            : "transition-all duration-300"
+        }
+      >
+        <Navbar />
+        <section className="px-8 py-24 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed space-y-10">
+          <div>
+            <h1 className="text-4xl font-bold text-[#292c34] mb-2">PawPal</h1>
+            <p className="text-gray-500 mb-4">October 2024</p>
+            <p>
+              PawPal is an app designed for new dog owners, providing training
+              advice, breed insights and behavioral tips. Users can track their
+              dog’s milestones, explore daily suggestions, and access helpful
+              comments to improve pet care and well-being.
+            </p>
+          </div>
 
-      <section className="px-8 py-24 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed space-y-10">
-        <div>
-          <h1 className="text-4xl font-bold text-[#292c34] mb-2">PawPal</h1>
-          <p className="text-gray-500 mb-4">October 2024</p>
-          <p>
-            PawPal is an app designed for new dog owners, providing training
-            advice, breed insights and behavioral tips. Users can track their
-            dog’s milestones, explore daily suggestions, and access helpful
-            comments to improve pet care and well-being.
-          </p>
-        </div>
+          <div>
+            <h2 className="text-2xl font-semibold text-[#292c34] mb-2">
+              Tools & Technologies
+            </h2>
+            <ul className="list-disc list-inside">
+              <li>Figma</li>
+              <li>Dribbble</li>
+            </ul>
+          </div>
 
-        <div>
-          <h2 className="text-2xl font-semibold text-[#292c34] mb-2">
-            Tools & Technologies
-          </h2>
-          <ul className="list-disc list-inside">
-            <li>Figma</li>
-          </ul>
-        </div>
+          <div>
+            <h2 className="text-2xl font-semibold text-[#292c34] mb-6">
+              Gallery
+            </h2>
 
-        <div>
-          <h2 className="text-2xl font-semibold text-[#292c34] mb-6">
-            Gallery
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+            {/* Prima riga con proporzioni 60% - 40% */}
+            <div className="grid grid-cols-[50%_50%] gap-4 mb-4">
+              <div className="relative h-80">
+                <Image
+                  src="/Projects/PawPal/PawPal - cover.jpg"
+                  alt="PawPal cover"
+                  fill
+                  className="object-contain w-full h-full cursor-pointer"
+                  sizes="(max-width: 768px) 100vw, 60vw"
+                  onClick={() =>
+                    setSelectedImage("/Projects/PawPal/PawPal - cover.jpg")
+                  }
+                />
+              </div>
+              <div className="relative h-80">
+                <Image
+                  src="/Projects/PawPal/PawPal - hand mockup.png"
+                  alt="PawPal hand mockup"
+                  fill
+                  className="object-contain w-full h-full cursor-pointer"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  onClick={() =>
+                    setSelectedImage(
+                      "/Projects/PawPal/PawPal - hand mockup.png"
+                    )
+                  }
+                />
+              </div>
+            </div>
+
+            <div className="relative h-80">
+              <Image
+                src="/Projects/PawPal/All Pages.png"
+                alt="PawPal all pages"
+                fill
+                className="object-contain w-full h-full cursor-pointer"
+                sizes="100vw"
+                onClick={() =>
+                  setSelectedImage("/Projects/PawPal/All Pages.png")
+                }
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {selectedImage && (
+        <div
+          className="fixed inset-0 flex items-center justify-center z-50 backdrop-blur-xl"
+          onClick={closeModal}
+        >
+          <div className="relative max-h-[90vh] max-w-[90vw]">
             <Image
-              src="/Projects/PawPal/PawPal - cover.jpg"
-              alt="PawPal cover"
-              width={500}
-              height={300}
-              className=""
+              src={selectedImage}
+              alt="Expanded view"
+              width={1200}
+              height={800}
+              className="h-auto w-full max-h-[90vh] object-contain"
             />
-            <Image
-              src="/Projects/PawPal/PawPal - hand mockup.png"
-              alt="PawPal hand mockup"
-              width={500}
-              height={300}
-              className="object-cover"
-            />
-            <Image
-              src="/Projects/PawPal/All Pages.jpg"
-              alt="PawPal all pages"
-              width={500}
-              height={300}
-              className="object-cover"
-            />
+            <button
+              className="absolute top-2 right-2 text-white text-3xl font-bold"
+              onClick={closeModal}
+            >
+              &times;
+            </button>
           </div>
         </div>
-      </section>
+      )}
     </main>
   );
 }

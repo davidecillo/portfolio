@@ -6,25 +6,25 @@ export default function Works() {
   const projects = [
     {
       id: 1,
-      image: "/Projects/PawPal - Cover.jpg",
+      image: "/Projects/PawPal/PawPal - Cover.jpg",
       title: "PawPal",
       path: "PawPal",
     },
     {
       id: 2,
-      image: "/Projects/Spotify Rebranding - Main Pages.jpg",
+      image: "/Projects/Spotify/Spotify Rebranding - Main Pages.jpg",
       title: "Spotify Rebranding",
       path: "Spotify",
     },
     {
       id: 3,
-      image: "/Projects/Cineverse.jpg",
+      image: "/Projects/Cineverse/Cineverse.jpg",
       title: "CineVerse",
       path: "CineVerse",
     },
     {
       id: 4,
-      image: "/Projects/Porsche.jpg",
+      image: "/Projects/Porsche/Porsche Mockup.jpg",
       title: "Porsche App",
       path: "Porsche",
     },
