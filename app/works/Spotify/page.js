@@ -22,7 +22,7 @@ export default function SpotifyRebrand() {
             <h1 className="text-4xl font-bold text-[#1DB954] mb-2">
               Spotify Rebranding
             </h1>
-            <p className="text-gray-500 mb-4">October 2025</p>
+            <p className="text-gray-500 mb-4">October 2024</p>
             <p>
               This project focuses on refreshing Spotify’s communication while
               maintaining its iconic identity. The brief aimed to encourage

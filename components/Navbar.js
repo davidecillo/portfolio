@@ -23,23 +23,23 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-          <Link
+            <Link
               href="/about"
               className={`${
-                pathname === "/contact" ? "font-bold" : "text-gray-700"
+                pathname === "/about" ? "font-bold" : "text-gray-700"
               } hover:font-bold`}
             >
               About
             </Link>
           </li>
           <li>
-          <Link
+            <Link
               href="/works"
               className={`${
-                pathname === "/contact" ? "font-bold" : "text-gray-700"
+                pathname === "/works" ? "font-bold" : "text-gray-700"
               } hover:font-bold`}
             >
-              Works 
+              Works
             </Link>
           </li>
           <li>
@@ -85,10 +85,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link
-                href="/contact"
-                className="text-gray-700 hover:font-bold"
-              >
+              <Link href="/contact" className="text-gray-700 hover:font-bold">
                 Contact
               </Link>
             </li>
