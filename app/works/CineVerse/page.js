@@ -20,11 +20,11 @@ export default function Cineverse() {
         <section className="px-8 py-24 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed space-y-10">
           <div>
             <h1 className="text-4xl font-bold text-[#292c34] mb-2">
-              Cineverse
+              CineVerse
             </h1>
             <p className="text-gray-500 mb-4">September 2024</p>
             <p>
-              <strong>CineVerse</strong> is an app for movie lovers to explore trending titles,
+              CineVerse is an app for movie lovers to explore trending titles,
               timeless classics, and hidden gems. Dive into curated collections,
               discover recommendations based on your taste, and read authentic
               reviews from fellow film enthusiasts. CineVerse also lets you keep
