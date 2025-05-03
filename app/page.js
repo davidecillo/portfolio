@@ -2,16 +2,14 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative min-h-screen">
       <Navbar />
-      <div className="p-8">
-        <div className="fixed bottom-4 left-8 flex items-end">
-          <h2 className="text-9xl font-bold text-[#292c34]">
-            Davide
-            <br />
-            Colombi
-          </h2>
-        </div>
+      <div className="fixed bottom-4 left-4">
+        <h2 className="text-6xl sm:text-6xl md:text-9xl font-bold text-[#292c34] leading-none">
+          Davide
+          <br />
+          Colombi
+        </h2>
       </div>
     </main>
   );
