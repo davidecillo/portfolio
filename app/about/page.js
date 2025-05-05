@@ -24,8 +24,8 @@ export default function About() {
         <div className="w-full space-y-4 md:space-y-6 text-gray-700 text-base md:text-lg leading-relaxed">
           <p>
             Hi! I'm Davide, a <strong>UX/UI Designer</strong> and{" "}
-            <strong>Front-End Developer</strong> with a passion for
-            crafting intuitive, meaningful experiences.
+            <strong>Front-End Developer</strong> with a passion for crafting
+            intuitive, meaningful experiences.
           </p>
           <p>
             My approach combines curiosity, creativity and a solid understanding

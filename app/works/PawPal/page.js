@@ -48,13 +48,13 @@ export default function PawPal() {
             <div className="grid grid-cols-[50%_50%] gap-4 mb-4">
               <div className="relative h-80">
                 <Image
-                  src="/Projects/PawPal/PawPal - cover.jpg"
+                  src="/Projects/PawPal/PawPal - cover.png"
                   alt="PawPal cover"
                   fill
                   className="object-contain w-full h-full cursor-pointer"
                   sizes="(max-width: 768px) 100vw, 60vw"
                   onClick={() =>
-                    setSelectedImage("/Projects/PawPal/PawPal - cover.jpg")
+                    setSelectedImage("/Projects/PawPal/PawPal - cover.png")
                   }
                 />
               </div>

@@ -19,7 +19,7 @@ export default function SpotifyRebrand() {
         <Navbar />
         <section className="px-8 py-24 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed space-y-10">
           <div>
-            <h1 className="text-4xl font-bold text-[#1DB954] mb-2">
+            <h1 className="text-4xl font-bold mb-2">
               Spotify Rebranding
             </h1>
             <p className="text-gray-500 mb-4">October 2024</p>
@@ -35,7 +35,7 @@ export default function SpotifyRebrand() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-[#1DB954] mb-2">
+            <h2 className="text-2xl font-semibold mb-2">
               Tools & Technologies
             </h2>
             <ul className="list-disc list-inside">
@@ -47,7 +47,7 @@ export default function SpotifyRebrand() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-[#1DB954]">
+            <h2 className="text-2xl font-semibold">
               Gallery
             </h2>
             <div className="grid grid-cols-[75%_25%] gap-4">

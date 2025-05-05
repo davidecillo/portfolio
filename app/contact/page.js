@@ -7,7 +7,6 @@ export default function Contact() {
       <Navbar />
 
       <section className="flex flex-col md:flex-row items-start justify-start gap-12 px-8 py-24 max-w-5xl mx-auto w-full text-gray-700 text-lg leading-relaxed">
-        {/* Foto profilo */}
         <div className="relative">
           <Image
             src="/profile pic.jpg"
@@ -84,7 +83,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Titolo fisso */}
       <div className="fixed bottom-4 left-8 flex items-end">
         <h2 className="text-9xl font-bold text-[#292c34]">Contact</h2>
       </div>
