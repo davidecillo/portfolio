@@ -17,13 +17,13 @@ export default function Cineverse() {
         }
       >
         <Navbar />
-        <section className="px-8 py-24 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed space-y-10">
+        <section className="px-6 sm:px-8 py-20 max-w-5xl mx-auto text-gray-700 text-base sm:text-lg leading-relaxed space-y-10">
           <div>
-            <h1 className="text-4xl font-bold text-[#292c34] mb-2">
+            <h1 className="text-3xl sm:text-4xl font-bold text-[#292c34] mb-2">
               CineVerse
             </h1>
             <p className="text-gray-500 mb-4">September 2024</p>
-            <p>
+            <p className="text-justify">
               CineVerse is an app for movie lovers to explore trending titles,
               timeless classics, and hidden gems. Dive into curated collections,
               discover recommendations based on your taste, and read authentic
@@ -39,7 +39,7 @@ export default function Cineverse() {
             <h2 className="text-2xl font-semibold text-[#292c34] mb-2">
               Tools & Technologies
             </h2>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside text-justify">
               <li>Figma</li>
             </ul>
           </div>
@@ -49,26 +49,26 @@ export default function Cineverse() {
               Gallery
             </h2>
 
-            <div className="grid grid-cols-2 gap-4 mb-4">
-              <div className="relative h-80">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div className="relative h-60 md:h-80">
                 <Image
                   src="/Projects/Cineverse/CineVerse.jpg"
                   alt="Cineverse homepage"
                   fill
                   className="object-contain w-full h-full cursor-pointer"
-                  sizes="(max-width: 768px) 100vw, 60vw"
+                  sizes="(max-width: 768px) 100vw, 30vw"
                   onClick={() =>
-                    setSelectedImage("/Projects/Cineverse/Cineverse.jpg")
+                    setSelectedImage("/Projects/Cineverse/CineVerse.jpg")
                   }
                 />
               </div>
-              <div className="relative h-80">
+              <div className="relative h-60 md:h-80">
                 <Image
                   src="/Projects/Cineverse/Movies.png"
                   alt="Cineverse movie detail"
                   fill
                   className="object-contain w-full h-full cursor-pointer"
-                  sizes="(max-width: 768px) 100vw, 40vw"
+                  sizes="(max-width: 768px) 100vw, 70vw"
                   onClick={() =>
                     setSelectedImage("/Projects/Cineverse/Movies.png")
                   }
@@ -76,7 +76,7 @@ export default function Cineverse() {
               </div>
             </div>
 
-            <div className="relative h-80">
+            <div className="relative h-60 md:h-80">
               <Image
                 src="/Projects/Cineverse/All Pages.png"
                 alt="Cineverse watchlist"

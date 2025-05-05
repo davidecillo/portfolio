@@ -17,18 +17,18 @@ export default function Porsche() {
         }
       >
         <Navbar />
-        <section className="px-8 py-24 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed space-y-10">
+        <section className="px-6 sm:px-8 py-20 max-w-5xl mx-auto text-gray-700 text-base sm:text-lg leading-relaxed space-y-10">
           <div>
-            <h1 className="text-4xl font-bold text-[#292c34] mb-2">
+            <h1 className="text-3xl sm:text-4xl font-bold text-[#292c34] mb-2">
               Porsche Experience
             </h1>
             <p className="text-gray-500 mb-4">August 2024</p>
-            <p>
+            <p className="text-justify">
               Porsche Experience is your ultimate gateway into the world of
               Porsche. Discover an exclusive catalog of legendary and new
-              models, explore detailed specs and stay ahead with the latest
-              news and innovations. From timeless classics to cutting-edge
-              designs, Porsche Experience keeps you connected to the passion,
+              models, explore detailed specs and stay ahead with the latest news
+              and innovations. From timeless classics to cutting-edge designs,
+              Porsche Experience keeps you connected to the passion,
               performance, and prestige that define the brand, all in one
               elegant, intuitive app.
             </p>
@@ -38,7 +38,7 @@ export default function Porsche() {
             <h2 className="text-2xl font-semibold text-[#292c34] mb-2">
               Tools & Technologies
             </h2>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside text-justify">
               <li>Figma</li>
               <li>Porsche Poster</li>
               <li>Dribbble</li>
@@ -50,8 +50,9 @@ export default function Porsche() {
               Gallery
             </h2>
 
-            <div className="grid grid-cols-[60%_40%] gap-4 mb-4">
-              <div className="relative h-80">
+            {/* Prima riga: 60% - 40% */}
+            <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-4 mb-4">
+              <div className="relative h-[210px] md:h-[300px]">
                 <Image
                   src="/Projects/Porsche/Porsche Mockup.jpg"
                   alt="Porsche Mockup"
@@ -63,7 +64,7 @@ export default function Porsche() {
                   }
                 />
               </div>
-              <div className="relative h-80">
+              <div className="relative h-[210px] md:h-[300px]">
                 <Image
                   src="/Projects/Porsche/Catalog.png"
                   alt="Porsche Catalog"
@@ -76,7 +77,9 @@ export default function Porsche() {
                 />
               </div>
             </div>
-            <div className="relative h-80">
+
+            {/* Seconda riga: full width */}
+            <div className="relative h-[210px] md:h-[300px] mb-4">
               <Image
                 src="/Projects/Porsche/All Pages.png"
                 alt="Porsche App Pages"
@@ -88,26 +91,28 @@ export default function Porsche() {
                 }
               />
             </div>
-            <div className="grid grid-cols-[50%_50%] gap-4 mb-4">
-              <div className="relative h-80">
+
+            {/* Terza riga: 50% - 50% */}
+            <div className="grid grid-cols-1 md:grid-cols-[50%_50%] gap-4 mb-4">
+              <div className="relative h-[210px] md:h-[300px]">
                 <Image
                   src="/Projects/Porsche/wallpaper1.jpg"
                   alt="Porsche Poster 1"
                   fill
                   className="object-contain w-full h-full cursor-pointer"
-                  sizes="(max-width: 768px) 100vw, 60vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   onClick={() =>
                     setSelectedImage("/Projects/Porsche/wallpaper1.jpg")
                   }
                 />
               </div>
-              <div className="relative h-80">
+              <div className="relative h-[210px] md:h-[300px]">
                 <Image
                   src="/Projects/Porsche/wallpaper2.jpg"
                   alt="Porsche Poster 2"
                   fill
                   className="object-contain w-full h-full cursor-pointer"
-                  sizes="(max-width: 768px) 100vw, 40vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   onClick={() =>
                     setSelectedImage("/Projects/Porsche/wallpaper2.jpg")
                   }

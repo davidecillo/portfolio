@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function SpotifyRebrand() {
+export default function SpotifyRebranding() {
   const [selectedImage, setSelectedImage] = useState(null);
   const closeModal = () => setSelectedImage(null);
 
@@ -17,60 +17,60 @@ export default function SpotifyRebrand() {
         }
       >
         <Navbar />
-        <section className="px-8 py-24 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed space-y-10">
+        <section className="px-6 sm:px-8 py-20 max-w-5xl mx-auto text-gray-700 text-base sm:text-lg leading-relaxed space-y-10">
           <div>
-            <h1 className="text-4xl font-bold mb-2">
+            <h1 className="text-3xl sm:text-4xl font-bold text-[#292c34] mb-2">
               Spotify Rebranding
             </h1>
-            <p className="text-gray-500 mb-4">October 2024</p>
-            <p>
-              This project focuses on refreshing Spotify’s communication while
-              maintaining its iconic identity. The brief aimed to encourage
-              users to discover new musical trends and emerging artists. Through
-              a refined approach to visuals and messaging, the rebranding
-              enhances the excitement of exploring fresh sounds, hidden gems and
-              the ever-evolving world of music, all without losing the essence
-              that makes Spotify instantly recognizable.
+            <p className="text-gray-500 mb-4">July 2023</p>
+            <p className="text-justify">
+              The Spotify Rebranding project explores a visual redesign of the
+              Spotify identity, focusing on a refreshed logo, consistent UI
+              components, and modern layouts. The concept aims to improve user
+              interaction, clarity, and branding consistency across digital
+              platforms.
             </p>
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="text-2xl font-semibold text-[#292c34] mb-2">
               Tools & Technologies
             </h2>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside text-justify">
               <li>Figma</li>
-              <li>Spotify</li>
-              <li>Mobbin</li>
-              <li>Page Flows</li>
+              <li>Illustrator</li>
             </ul>
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold">
+            <h2 className="text-2xl font-semibold text-[#292c34] mb-6">
               Gallery
             </h2>
-            <div className="grid grid-cols-[75%_25%] gap-4">
-              <div className="relative h-80">
-                <Image
-                  src="/Projects/Spotify/All Pages.png"
-                  alt="Spotify All Pages"
-                  fill
-                  className="object-contain w-full h-full cursor-pointer"
-                  sizes="(max-width: 768px) 100vw, 60vw"
-                  onClick={() =>
-                    setSelectedImage("/Projects/Spotify/All Pages.png")
-                  }
-                />
-              </div>
-              <div className="relative h-80">
+
+            {/* Griglia asimmetrica 30% - 70% da md in su */}
+            <div className="grid grid-cols-1 md:grid-cols-[30%_70%] gap-4 mb-4">
+              <div className="relative h-[210px] md:h-[300px]">
                 <Image
                   src="/Projects/Spotify/News.png"
                   alt="Spotify News Page"
                   fill
                   className="object-contain w-full h-full cursor-pointer"
-                  sizes="(max-width: 768px) 100vw, 40vw"
-                  onClick={() => setSelectedImage("/Projects/Spotify/News.png")}
+                  sizes="(max-width: 768px) 100vw, 30vw"
+                  onClick={() =>
+                    setSelectedImage("/Projects/Spotify/News.png")
+                  }
+                />
+              </div>
+              <div className="relative h-[210px] md:h-[300px]">
+                <Image
+                  src="/Projects/Spotify/All Pages.png"
+                  alt="Spotify redesign full"
+                  fill
+                  className="object-contain w-full h-full cursor-pointer"
+                  sizes="(max-width: 768px) 100vw, 70vw"
+                  onClick={() =>
+                    setSelectedImage("/Projects/Spotify/All Pages.png")
+                  }
                 />
               </div>
             </div>

@@ -17,11 +17,13 @@ export default function PawPal() {
         }
       >
         <Navbar />
-        <section className="px-8 py-24 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed space-y-10">
+        <section className="px-6 sm:px-8 py-20 max-w-5xl mx-auto text-gray-700 text-base sm:text-lg leading-relaxed space-y-10">
           <div>
-            <h1 className="text-4xl font-bold text-[#292c34] mb-2">PawPal</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-[#292c34] mb-2">
+              PawPal
+            </h1>
             <p className="text-gray-500 mb-4">October 2024</p>
-            <p>
+            <p className="text-justify">
               PawPal is an app designed for new dog owners, providing training
               advice, breed insights and behavioral tips. Users can track their
               dog’s milestones, explore daily suggestions, and access helpful
@@ -33,7 +35,7 @@ export default function PawPal() {
             <h2 className="text-2xl font-semibold text-[#292c34] mb-2">
               Tools & Technologies
             </h2>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside text-justify">
               <li>Figma</li>
               <li>Dribbble</li>
             </ul>
@@ -44,9 +46,8 @@ export default function PawPal() {
               Gallery
             </h2>
 
-            {/* Prima riga con proporzioni 60% - 40% */}
-            <div className="grid grid-cols-[50%_50%] gap-4 mb-4">
-              <div className="relative h-80">
+            <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-4 mb-4">
+              <div className="relative h-60 md:h-80">
                 <Image
                   src="/Projects/PawPal/PawPal - cover.png"
                   alt="PawPal cover"
@@ -58,7 +59,7 @@ export default function PawPal() {
                   }
                 />
               </div>
-              <div className="relative h-80">
+              <div className="relative h-60 md:h-80">
                 <Image
                   src="/Projects/PawPal/PawPal - hand mockup.png"
                   alt="PawPal hand mockup"
@@ -74,7 +75,7 @@ export default function PawPal() {
               </div>
             </div>
 
-            <div className="relative h-80">
+            <div className="relative h-60 md:h-80">
               <Image
                 src="/Projects/PawPal/All Pages.png"
                 alt="PawPal all pages"

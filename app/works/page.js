@@ -58,16 +58,16 @@ export default function Works() {
   ];
 
   return (
-    <main className="flex flex-col items-center min-h-screen bg-gray-50 w-screen overflow-hidden">
+    <main className="flex flex-col items-center pt-8 min-h-screen bg-gray-50 overflow-x-hidden">
       <Navbar />
 
       {/* Titolo mobile */}
-      <div className="md:hidden w-full px-6 pt-6">
-        <h2 className="text-4xl font-bold text-[#292c34]">Works</h2>
-      </div>
+      <section className="w-full px-6 max-w-5xl mx-auto mb-6 md:hidden">
+        <h1 className="text-4xl font-bold text-[#292c34]">Works</h1>
+      </section>
 
       {/* Carosello mobile */}
-      <div className="md:hidden flex w-full overflow-x-auto scroll-smooth snap-x snap-mandatory pb-24 space-x-4 pl-6 pr-4 mt-10 scrollbar-hide">
+      <div className="md:hidden flex w-full overflow-x-auto scroll-smooth snap-x snap-mandatory pb-24 space-x-4 pl-6 pr-4 scrollbar-hide">
         {mobileProjects.map((project) => (
           <Link
             key={project.id}
