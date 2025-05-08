@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Works() {
   const mobileProjects = [
@@ -18,7 +19,7 @@ export default function Works() {
     },
     {
       id: 3,
-      image: "/Projects/Cineverse/CineVerse - Mobile Mockup.jpg",
+      image: "/Projects/Cineverse/CineVerse.jpg",
       title: "CineVerse",
       path: "CineVerse",
     },
@@ -59,6 +60,15 @@ export default function Works() {
 
   return (
     <main className="flex flex-col items-center pt-8 min-h-screen bg-gray-50 overflow-x-hidden">
+      <Head>
+        <title>Works</title>
+        <meta
+          name="description"
+          content="CineVerse: An app for movie lovers to track and explore films."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navbar />
 
       {/* Titolo mobile */}

@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useState } from "react";
+import Head from "next/head";
 
 export default function PawPal() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -9,6 +10,15 @@ export default function PawPal() {
 
   return (
     <main className="flex flex-col items-center pt-8 min-h-screen bg-gray-50 overflow-x-hidden">
+      <Head>
+        <title>PawPal</title>
+        <meta
+          name="description"
+          content="CineVerse: An app for movie lovers to track and explore films."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div
         className={
           selectedImage
@@ -49,7 +59,7 @@ export default function PawPal() {
             <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-4 mb-4">
               <div className="relative h-60 md:h-80">
                 <Image
-                  src="/Projects/PawPal/PawPal - cover.png"
+                  src="/Projects/PawPal/PawPal - Cover.png"
                   alt="PawPal cover"
                   fill
                   className="object-contain w-full h-full cursor-pointer"

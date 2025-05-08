@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useState } from "react";
+import Head from "next/head";
 
 export default function SpotifyRebranding() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -9,6 +10,15 @@ export default function SpotifyRebranding() {
 
   return (
     <main className="flex flex-col items-center pt-8 min-h-screen bg-gray-50 overflow-x-hidden">
+      <Head>
+        <title>Spotify Rebranding</title>
+        <meta
+          name="description"
+          content="CineVerse: An app for movie lovers to track and explore films."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div
         className={
           selectedImage

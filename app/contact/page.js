@@ -1,9 +1,19 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import Head from "next/head";
 
 export default function Contact() {
   return (
     <main className="flex flex-col items-center min-h-screen bg-gray-50 overflow-x-hidden">
+      <Head>
+        <title>Contact</title>
+        <meta
+          name="description"
+          content="CineVerse: An app for movie lovers to track and explore films."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navbar />
 
       <div className="md:hidden w-full px-6 pt-6">

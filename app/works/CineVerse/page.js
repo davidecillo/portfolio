@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useState } from "react";
+import Head from "next/head";
 
 export default function Cineverse() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -9,6 +10,15 @@ export default function Cineverse() {
 
   return (
     <main className="flex flex-col items-center pt-8 min-h-screen bg-gray-50 overflow-x-hidden">
+      <Head>
+        <title>CineVerse</title>
+        <meta
+          name="description"
+          content="CineVerse: An app for movie lovers to track and explore films."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div
         className={
           selectedImage
@@ -50,27 +60,45 @@ export default function Cineverse() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <div className="relative h-60 md:h-80">
+              {/* Mobile version */}
+              <div className="relative h-60 md:hidden">
                 <Image
-                  src="/Projects/Cineverse/CineVerse.jpg"
-                  alt="Cineverse homepage"
+                  src="/Projects/CineVerse/CineVerse - Mobile Mockup.jpg"
+                  alt="Cineverse Mobile Mockup"
                   fill
                   className="object-contain w-full h-full cursor-pointer"
-                  sizes="(max-width: 768px) 100vw, 30vw"
+                  sizes="100vw"
                   onClick={() =>
-                    setSelectedImage("/Projects/Cineverse/CineVerse.jpg")
+                    setSelectedImage(
+                      "/Projects/CineVerse/CineVerse - Mobile Mockup.jpg"
+                    )
                   }
                 />
               </div>
+
+              {/* Desktop/Tablet version */}
+              <div className="relative h-60 hidden md:block md:h-80">
+                <Image
+                  src="/Projects/CineVerse/CineVerse.jpg"
+                  alt="Cineverse Mockup"
+                  fill
+                  className="object-contain w-full h-full cursor-pointer"
+                  sizes="30vw"
+                  onClick={() =>
+                    setSelectedImage("/Projects/CineVerse/CineVerse.jpg")
+                  }
+                />
+              </div>
+
               <div className="relative h-60 md:h-80">
                 <Image
-                  src="/Projects/Cineverse/Movies.png"
+                  src="/Projects/CineVerse/Movies.png"
                   alt="Cineverse movie detail"
                   fill
                   className="object-contain w-full h-full cursor-pointer"
                   sizes="(max-width: 768px) 100vw, 70vw"
                   onClick={() =>
-                    setSelectedImage("/Projects/Cineverse/Movies.png")
+                    setSelectedImage("/Projects/CineVerse/Movies.png")
                   }
                 />
               </div>
@@ -78,13 +106,13 @@ export default function Cineverse() {
 
             <div className="relative h-60 md:h-80">
               <Image
-                src="/Projects/Cineverse/All Pages.png"
+                src="/Projects/CineVerse/All Pages.png"
                 alt="Cineverse watchlist"
                 fill
                 className="object-contain w-full h-full cursor-pointer"
                 sizes="100vw"
                 onClick={() =>
-                  setSelectedImage("/Projects/Cineverse/All Pages.png")
+                  setSelectedImage("/Projects/CineVerse/All Pages.png")
                 }
               />
             </div>
