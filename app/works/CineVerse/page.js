@@ -60,24 +60,7 @@ export default function Cineverse() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              {/* Mobile version */}
-              <div className="relative h-60 md:hidden">
-                <Image
-                  src="/Projects/CineVerse/CineVerse - Mobile Mockup.jpg"
-                  alt="Cineverse Mobile Mockup"
-                  fill
-                  className="object-contain w-full h-full cursor-pointer"
-                  sizes="100vw"
-                  onClick={() =>
-                    setSelectedImage(
-                      "/Projects/CineVerse/CineVerse - Mobile Mockup.jpg"
-                    )
-                  }
-                />
-              </div>
-
-              {/* Desktop/Tablet version */}
-              <div className="relative h-60 hidden md:block md:h-80">
+              <div className="relative h-60 md:block md:h-80">
                 <Image
                   src="/Projects/CineVerse/CineVerse.jpg"
                   alt="Cineverse Mockup"

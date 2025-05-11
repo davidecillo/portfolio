@@ -19,7 +19,7 @@ export default function Works() {
     },
     {
       id: 3,
-      image: "/Projects/Cineverse/CineVerse.jpg",
+      image: "/Projects/CineVerse/CineVerse - Mobile Mockup.jpg",
       title: "CineVerse",
       path: "CineVerse",
     },
@@ -46,7 +46,7 @@ export default function Works() {
     },
     {
       id: 3,
-      image: "/Projects/Cineverse/Cineverse.jpg",
+      image: "/Projects/CineVerse/CineVerse.jpg",
       title: "CineVerse",
       path: "CineVerse",
     },
