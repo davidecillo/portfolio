@@ -65,7 +65,7 @@ export default function PawPal() {
                   className="object-contain w-full h-full cursor-pointer"
                   sizes="(max-width: 768px) 100vw, 60vw"
                   onClick={() =>
-                    setSelectedImage("/Projects/PawPal/PawPal - cover.png")
+                    setSelectedImage("/Projects/PawPal/PawPal - Cover.png")
                   }
                 />
               </div>
