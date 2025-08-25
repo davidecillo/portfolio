@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Akzidenz-Grotesk BQ";
+  src: url("/fonts/akzidenz/AkzidenzGroteskBQ-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   --background: #f8f8f8;
   --foreground: #171717;
+  --font-title: "Akzidenz-Grotesk BQ", sans-serif;
+  --font-content: "Inter", sans-serif;
 }
 
 @theme inline {
@@ -22,7 +31,14 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  font-family: var(--font-title);
+}
+
+.content {
+  font-family: var(--font-content);
 }
 
 /* Nasconde le scrollbar orizzontali */
@@ -31,6 +47,6 @@ body {
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE e Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE e Edge */
+  scrollbar-width: none; /* Firefox */
 }

@@ -1,40 +1,32 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import Head from "next/head";
+
+export const metadata = {
+  title: "About - Davide Colombi",
+  description: "About Davide Colombi",
+};
 
 export default function About() {
   return (
-    <main className="flex flex-col items-center pt-8 min-h-screen bg-gray-50 overflow-x-hidden">
-      <Head>
-        <title>About</title>
-        <meta
-          name="description"
-          content="CineVerse: An app for movie lovers to track and explore films."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <main className="flex flex-col pt-8 bg-gray-50 overflow-x-hidden">
       <Navbar />
 
-      <div className="w-full px-6 max-w-5xl my-4 mx-auto md:hidden">
-        <h1 className="text-3xl font-bold text-[#292c34]">About</h1>
-      </div>
-
-      <div className="flex flex-col md:flex-row items-center justify-start px-6 md:px-8 md:py-8 max-w-5xl mx-auto text-justify">
-        <div className="relative aspect-[4/3] w-full max-w-[400px] mb-6">
+      <div className="flex flex-col mt-8 px-6 mb-12 md: mb-0 md:min-h-screen md:flex-row md:items-center md:justify-center md:mt-0">
+        <div className="relative aspect-[4/3] w-full max-w-[800px] mb-6 md:mr-12">
           <Image
-            src="/profile laptop.jpg"
+            src="/davide colombi coding.jpg"
             alt="Davide Colombi"
             fill
             className="object-cover"
+            priority
           />
         </div>
 
-        <div className="w-full mb-2 md:space-y-6 text-gray-700 md:text-lg leading-relaxed">
-          <h2 className="text-2xl font-semibold text-[#292c34] mb-2">
+        <div className="content w-full mb-2 text-gray-700 md:text-lg text-left md:pr-8">
+          <h2 className="title text-2xl font-bold text-[#292c34] mb-6">
             Nice to meet you!
           </h2>
-          <p>
+          <p className="mb-2">
             I'm Davide, a <strong>Freelance Web Developer</strong> and
             <strong> UX/UI Designer</strong> with a passion for crafting
             intuitive, meaningful experiences.
@@ -47,12 +39,11 @@ export default function About() {
           </p>
         </div>
       </div>
-
-      <div className="px-6 md:px-8 pb-8 mt-4 md:pb-32 max-w-5xl mx-auto text-gray-700 text-base md:text-lg leading-relaxed text-justify">
-        <h2 className="text-2xl font-semibold mb-3 text-[#292c34]">
+      <div className="px-6 md:px-8 pb-8 mt-4 md: pr-8 md:pb-32 text-gray-700 text-base md:text-lg leading-relaxed text-left">
+        <h2 className="title font-bold text-2xl mb-6 text-[#292c34]">
           Work Experiences
         </h2>
-        <ul className="space-y-4">
+        <ul className="space-y-2">
           <li>
             <strong>Web Developer</strong> for studioPANG |
             <em> May 2025 - now</em>
@@ -69,10 +60,6 @@ export default function About() {
             Portal Studio.
           </li>
         </ul>
-      </div>
-
-      <div className="hidden md:flex fixed bottom-4 left-8 items-end">
-        <h2 className="text-9xl font-bold text-[#292c34]">About</h2>
       </div>
     </main>
   );

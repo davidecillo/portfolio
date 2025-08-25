@@ -1,38 +1,30 @@
 import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import Head from "next/head";
+
+export const metadata = {
+  title: "Contact - Davide Colombi",
+  description: "Contact Davide Colombi",
+};
 
 export default function Contact() {
   return (
-    <main className="flex flex-col items-center pt-8 min-h-screen bg-gray-50 overflow-x-hidden">
-      <Head>
-        <title>Contact</title>
-        <meta
-          name="description"
-          content="CineVerse: An app for movie lovers to track and explore films."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <main className="flex flex-col pt-8 min-h-screen bg-gray-50 overflow-x-hidden">
       <Navbar />
 
-      <div className="w-full px-6 max-w-5xl my-4 mx-auto md:hidden">
-        <h1 className="text-3xl font-bold text-[#292c34]">Contact</h1>
-      </div>
-
-      <div className="flex flex-col md:flex-row justify-start px-6 md:px-8 md:py-8 max-w-5xl mx-auto text-justify">
-        <div className="relative w-[240px] h-[320px] mb-6">
+      <div className="flex flex-col mt-8 md:mt-0 md:flex-row md:items-center justify-center px-6 md:pt-8">
+        <div className="relative aspect-[3/4] w-full max-w-[400px] mb-6 md:mr-12">
           <Image
             src="/profile pic.jpg"
             alt="Davide Colombi"
             fill
             className="object-cover"
+            priority
           />
         </div>
 
-        <div className="w-full mb-2 md:space-y-6 text-gray-700 md:text-lg leading-relaxed">
-          <h2 className="text-2xl font-semibold mb-2 text-[#292c34]">
+        <div className="content w-full mb-2 md:w-2xl text-gray-700 md:text-lg leading-relaxed">
+          <h2 className="title text-2xl font-bold mb-6 text-[#292c34]">
             Let's get in touch!
           </h2>
           <p>
@@ -42,21 +34,18 @@ export default function Contact() {
           </p>
 
           <div className="mt-4">
-            <div className="mb-4">
-              <strong>Email</strong>
-              <p>
+            <div className="mb-8">
                 <a
                   href="mailto:davide.colombi04@gmail.com"
                   className="hover:underline"
                 >
                   davide.colombi04@gmail.com
                 </a>
-              </p>
             </div>
 
             <div className="mb-4">
               <strong>Find me</strong>
-              <div className="flex mt-1 gap-1">
+              <div className="flex mt-1 gap-2">
                 <a
                   href="https://www.linkedin.com/in/davidecolombii"
                   target="_blank"
@@ -83,7 +72,7 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-            <div>
+            <div className="mb-4">
               <div>
                 <strong>Resume</strong>
                 <div>
@@ -94,8 +83,8 @@ export default function Contact() {
                     className="hover:underline"
                   >
                     it
-                  </a>
-                  {" "} - {" "}
+                  </a>{" "}
+                  -{" "}
                   <a
                     href="/cv/Colombi Davide - CV EN 2025.pdf"
                     target="_blank"
@@ -109,10 +98,6 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="hidden md:flex fixed bottom-4 left-8 items-end">
-        <h2 className="text-9xl font-bold text-[#292c34]">Contact</h2>
       </div>
     </main>
   );

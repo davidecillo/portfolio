@@ -12,7 +12,7 @@ const Navbar = () => {
     `${pathname === href ? "font-bold" : "text-gray-700"} hover:font-bold`;
 
   return (
-    <nav className="fixed top-0 right-0 p-4 w-full z-50">
+    <nav className="content fixed top-0 right-0 p-4 w-full z-50">
       <div className="flex justify-end items-center">
         {/* Desktop menu */}
         <ul className="hidden md:flex space-x-6">
@@ -22,13 +22,13 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/about" className={linkClass("/about")}>
-              About
+            <Link href="/works" className={linkClass("/works")}>
+              Works
             </Link>
           </li>
           <li>
-            <Link href="/works" className={linkClass("/works")}>
-              Works
+            <Link href="/about" className={linkClass("/about")}>
+              About
             </Link>
           </li>
           <li>
@@ -66,15 +66,6 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            href="/about"
-            onClick={() => setIsOpen(false)}
-            className={`${
-              pathname === "/about" ? "font-bold" : "text-gray-700"
-            } hover:font-bold`}
-          >
-            About
-          </Link>
-          <Link
             href="/works"
             onClick={() => setIsOpen(false)}
             className={`${
@@ -82,6 +73,15 @@ const Navbar = () => {
             } hover:font-bold`}
           >
             Works
+          </Link>
+          <Link
+            href="/about"
+            onClick={() => setIsOpen(false)}
+            className={`${
+              pathname === "/about" ? "font-bold" : "text-gray-700"
+            } hover:font-bold`}
+          >
+            About
           </Link>
           <Link
             href="/contact"
