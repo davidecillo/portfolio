@@ -7,10 +7,10 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen">
+    <main className="relative h-screen w-screen overflow-hidden">
       <Navbar />
 
-      <div className="h-screen flex items-end px-6 pb-4">
+      <div className="absolute bottom-4 left-4">
         <h2 className="title text-6xl font-bold md:text-9xl leading-none">
           Davide
           <br />

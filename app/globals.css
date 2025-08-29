@@ -9,7 +9,7 @@
 
 :root {
   --background: #f8f8f8;
-  --foreground: #171717;
+  --foreground: black;
   --font-title: "Akzidenz-Grotesk BQ", sans-serif;
   --font-content: "Inter", sans-serif;
 }
@@ -24,13 +24,13 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #f8f8f8;
-    --foreground: #171717;
+    --foreground: black;
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: black !important;
 }
 
 .title {
@@ -71,4 +71,27 @@ body {
 .custom-cursor.hover {
   width: 25px;
   height: 25px;
+}
+
+.underline-grow {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.underline-grow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: black; 
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.underline-grow:hover::after {
+  transform: scaleX(1);
 }

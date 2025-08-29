@@ -1,4 +1,3 @@
-import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
@@ -13,7 +12,7 @@ export default function Contact() {
       <Navbar />
 
       <div className="flex flex-col mt-8 md:mt-0 md:flex-row md:items-center justify-center px-6 md:pt-8">
-        <div className="relative aspect-[3/4] w-full max-w-[400px] mb-6 md:mr-12">
+        <div className="relative aspect-[3/4] w-full max-w-[400px] mb-6 md:mr-12 xl:max-w-[800px]">
           <Image
             src="/profile pic.jpg"
             alt="Davide Colombi"
@@ -23,8 +22,8 @@ export default function Contact() {
           />
         </div>
 
-        <div className="content w-full mb-2 md:w-2xl text-gray-700 md:text-lg leading-relaxed">
-          <h2 className="title text-2xl font-bold mb-6 text-[#292c34]">
+        <div className="content w-full mb-2 md:w-2xl md:text-lg leading-relaxed xl:text-xl">
+          <h2 className="title text-2xl font-bold mb-6 xl:text-3xl">
             Let's get in touch!
           </h2>
           <p>
@@ -37,7 +36,7 @@ export default function Contact() {
             <div className="mb-8">
                 <a
                   href="mailto:davide.colombi04@gmail.com"
-                  className="hover:underline"
+                  className="underline-grow"
                 >
                   davide.colombi04@gmail.com
                 </a>
@@ -80,7 +79,7 @@ export default function Contact() {
                     href="/cv/Colombi Davide - CV 2025.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline"
+                    className="underline-grow"
                   >
                     it
                   </a>{" "}
@@ -89,7 +88,7 @@ export default function Contact() {
                     href="/cv/Colombi Davide - CV EN 2025.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline"
+                    className="underline-grow"
                   >
                     en
                   </a>

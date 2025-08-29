@@ -11,8 +11,8 @@ export default function About() {
     <main className="flex flex-col pt-8 bg-gray-50 overflow-x-hidden">
       <Navbar />
 
-      <div className="flex flex-col mt-8 px-6 mb-12 md: mb-0 md:min-h-screen md:flex-row md:items-center md:justify-center md:mt-0">
-        <div className="relative aspect-[4/3] w-full max-w-[800px] mb-6 md:mr-12">
+      <div className="flex flex-col mt-8 px-6 mb-12 md:mb-0 md:min-h-screen md:flex-row md:items-center md:justify-center md:mt-0">
+        <div className="relative aspect-[4/3] w-full max-w-[800px] xl:max-w-[1600px] mb-6 md:mr-12">
           <Image
             src="/davide colombi coding.jpg"
             alt="Davide Colombi"
@@ -22,8 +22,8 @@ export default function About() {
           />
         </div>
 
-        <div className="content w-full mb-2 text-gray-700 md:text-lg text-left md:pr-8">
-          <h2 className="title text-2xl font-bold text-[#292c34] mb-6">
+        <div className="content w-full mb-2 md:text-lg text-left md:pr-8 xl:text-xl">
+          <h2 className="title text-2xl font-bold mb-6 xl:text-3xl">
             Nice to meet you!
           </h2>
           <p className="mb-2">
@@ -39,8 +39,8 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="px-6 md:px-8 pb-8 mt-4 md: pr-8 md:pb-32 text-gray-700 text-base md:text-lg leading-relaxed text-left">
-        <h2 className="title font-bold text-2xl mb-6 text-[#292c34]">
+      <div className="px-6 md:px-8 pb-8 mt-4 md: pr-8 md:pb-32 text-base md:text-lg leading-relaxed text-left xl:text-xl">
+        <h2 className="title font-bold text-3xl mb-6">
           Work Experiences
         </h2>
         <ul className="space-y-2">

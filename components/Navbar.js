@@ -9,7 +9,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const linkClass = (href) =>
-    `${pathname === href ? "font-bold" : "text-gray-700"} hover:font-bold`;
+    `${pathname === href ? "font-bold" : "text-black"} hover:font-bold`;
 
   return (
     <nav className="content fixed top-0 right-0 p-4 w-full z-50">
@@ -42,7 +42,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-700 text-2xl"
+            className="text-2xl"
           >
             ☰
           </button>
@@ -60,7 +60,7 @@ const Navbar = () => {
             href="/"
             onClick={() => setIsOpen(false)}
             className={`${
-              pathname === "/" ? "font-bold" : "text-gray-700"
+              pathname === "/" ? "font-bold" : "text-black"
             } hover:font-bold`}
           >
             Home
@@ -69,7 +69,7 @@ const Navbar = () => {
             href="/works"
             onClick={() => setIsOpen(false)}
             className={`${
-              pathname === "/works" ? "font-bold" : "text-gray-700"
+              pathname === "/works" ? "font-bold" : "text-black"
             } hover:font-bold`}
           >
             Works
@@ -78,7 +78,7 @@ const Navbar = () => {
             href="/about"
             onClick={() => setIsOpen(false)}
             className={`${
-              pathname === "/about" ? "font-bold" : "text-gray-700"
+              pathname === "/about" ? "font-bold" : "text-black"
             } hover:font-bold`}
           >
             About
@@ -87,7 +87,7 @@ const Navbar = () => {
             href="/contact"
             onClick={() => setIsOpen(false)}
             className={`${
-              pathname === "/contact" ? "font-bold" : "text-gray-700"
+              pathname === "/contact" ? "font-bold" : "text-black"
             } hover:font-bold`}
           >
             Contact

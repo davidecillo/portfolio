@@ -143,7 +143,7 @@ export default function WorksCarousel() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -40 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="absolute z-10 mx-8 mt-[65vh] text-center text-lg leading-relaxed md:text-2xl lg:text-xl lg:mt-[80vh]"
+              className="absolute z-10 mx-8 mt-[75vh] text-center text-lg leading-relaxed md:text-2xl lg:text-xl lg:mt-[80vh] xl:text-2xl"
             >
               {project.description}
             </motion.p>
