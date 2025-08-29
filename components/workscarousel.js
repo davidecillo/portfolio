@@ -69,11 +69,11 @@ export default function WorksCarousel() {
   const project = carouselProjects[index];
 
   return (
-    <main className="relative h-screen overflow-hidden">
+    <main className="relative h-[100dvh] overflow-hidden">
       <Navbar />
 
-      <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
-        <AnimatePresence custom={direction} initial={false} mode="wait">
+      <section className="relative h-[100dvh] w-full overflow-hidden flex items-center justify-center">
+        <AnimatePresence custom={direction} mode="wait">
           <motion.div
             key={project.id}
             custom={direction}
@@ -100,28 +100,29 @@ export default function WorksCarousel() {
             }}
             className="absolute inset-0 flex flex-col items-center justify-center px-4 cursor-grab"
           >
+            {/* Titolo */}
             <motion.h2
               key={`${project.id}-title`}
-              initial={{ opacity: 0, y: 0, x: 0 }}
-              animate={{ opacity: 1, y: 0, x: 0 }}
-              exit={{ opacity: 0, y: 0, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0 }} // parte invisibile anche al mount
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1, delay: 0 }} // primo a comparire
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-               text-[20vw] font-bold z-0 select-none tracking-tight leading-none
-               pointer-events-none lg:text-[15vw]"
+    text-[20vw] font-bold z-0 select-none tracking-tight leading-none
+    pointer-events-none lg:text-[15vw]"
             >
               {project.title}
             </motion.h2>
 
-            {/* immagine cliccabile SOLO se non è stato drag */}
+            {/* Immagine */}
             <motion.div
               key={`${project.id}-image`}
-              initial={{ opacity: 0, y: 40, x: 0, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 40, x: 0, scale: 0.95 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 40, scale: 0.95 }}
+              transition={{ duration: 0.8, delay: 0.6 }} // secondo a comparire
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-               h-[65vh] max-h-[450px] md:max-h-[600px] lg:max-h-[900px] aspect-[2/3] cursor-pointer"
+    h-[65vh] max-h-[450px] md:max-h-[600px] lg:max-h-[900px] aspect-[2/3] cursor-pointer"
               onPointerUp={() => {
                 if (!moved.current) router.push(`/works/${project.path}`);
               }}
@@ -137,13 +138,15 @@ export default function WorksCarousel() {
               />
             </motion.div>
 
+            {/* Descrizione */}
             <motion.p
               key={`${project.id}-desc`}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -40 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="absolute z-10 mx-8 mt-[75vh] text-center text-lg leading-relaxed md:text-2xl lg:text-xl lg:mt-[80vh] xl:text-2xl"
+              transition={{ duration: 0.8, delay: 1 }}
+              className="absolute z-10 mx-8 mt-[75vh] text-center text-lg leading-relaxed 
+    md:text-2xl lg:text-xl lg:mt-[80vh] xl:text-2xl"
             >
               {project.description}
             </motion.p>

@@ -10,7 +10,7 @@ export default function Home() {
     <main className="relative h-[100dvh] w-screen overflow-hidden">
       <Navbar />
 
-      <div className="absolute bottom-4 left-6">
+      <div className="absolute bottom-4 left-4">
         <h2 className="title text-6xl font-bold md:text-9xl leading-none">
           Davide
           <br />

@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <main className="flex flex-col pt-8 min-h-screen bg-gray-50 overflow-x-hidden">
+    <main className="flex flex-col pt-8 min-h-[100dvh] bg-gray-50 overflow-x-hidden">
       <Navbar />
 
       <div className="flex flex-col mt-8 md:mt-0 md:flex-row md:items-center justify-center px-6 md:pt-8">
