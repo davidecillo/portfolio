@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
 
       <div className="h-screen flex items-end px-6 pb-4">
-        <h2 className="title font-bold sm:text-6xl md:text-9xl leading-none">
+        <h2 className="title text-6xl font-bold md:text-9xl leading-none">
           Davide
           <br />
           Colombi

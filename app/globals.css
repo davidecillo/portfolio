@@ -35,6 +35,7 @@ body {
 
 .title {
   font-family: var(--font-title);
+  color: black;
 }
 
 .content {
@@ -49,4 +50,25 @@ body {
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE e Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+/* style.css */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px; /* larghezza di riposo */
+  height: 16px; /* altezza fissa */
+  background-color: black;
+  border-radius: 9999px; /* rende la forma una capsula quando width > height */
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform, width; /* hint per il browser */
+  /* nessun transform: scale qui — useremo translate+rotate in JS */
+  transition: opacity 150ms linear; /* opzionale per fade in/out */
+}
+
+.custom-cursor.hover {
+  width: 25px;
+  height: 25px;
 }
