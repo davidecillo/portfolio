@@ -40,7 +40,7 @@ export default function About() {
         </div>
       </div>
       <div className="px-6 md:px-8 pb-8 mt-4 md: pr-8 md:pb-32 text-base md:text-lg leading-relaxed text-left xl:text-xl">
-        <h2 className="title font-bold text-3xl mb-6">
+        <h2 className="title font-bold text-2xl mb-6 xl:text-3xl">
           Work Experiences
         </h2>
         <ul className="space-y-2">
