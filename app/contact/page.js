@@ -8,38 +8,53 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <main className="flex flex-col pt-8 min-h-[100dvh] bg-gray-50 overflow-x-hidden">
+    <main className="relative min-h-[100dvh] bg-gray-50 pt-8">
       <Navbar />
+      <div className="fixed bottom-0 w-full h-[40vh] md:h-[60vh] lg:hidden z-0">
+        <Image
+          src="/davidecolombi.png"
+          alt="Davide Colombi"
+          fill
+          className="object-cover object-bottom"
+          priority
+        />
+      </div>
 
-      <div className="flex flex-col mt-8 md:mt-0 md:flex-row md:items-center justify-center px-6 md:pt-8">
-        <div className="relative aspect-[3/4] w-full max-w-[400px] mb-6 md:mr-12 xl:max-w-[800px]">
-          <Image
-            src="/profile pic.jpg"
-            alt="Davide Colombi"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+      <div className="hidden lg:block fixed bottom-0 left-12 h-[80vh] w-full z-0">
+        <Image
+          src="/davidecolombi.png"
+          alt="Davide Colombi"
+          fill
+          className="object-contain object-bottom object-left"
+          priority
+        />
+      </div>
 
-        <div className="content w-full mb-2 md:w-2xl md:text-lg leading-relaxed xl:text-xl">
+      <div className="relative z-10 flex flex-col lg:flex-row lg:items-start lg:justify-end px-4 lg:pt-8 min-h-screen pb-[45vh] lg:pb-0">
+        <div className="lg:w-1/2 lg:pl-12 flex flex-col justify-center w-full mb-8 pt-16 lg:text-lg lg:pt-8 leading-relaxed xl:text-xl">
           <h2 className="title text-2xl font-bold mb-6 xl:text-3xl">
             Let's get in touch!
           </h2>
-          <p>
+          <p className="mb-4 lg:hidden">
             Whether you’re interested in collaborating, have a project idea, or
             just want to say hi, I’d love to hear from you. Feel free to reach
             out via email or connect with me on my professional channels.
           </p>
+          <p className="hidden mb-4 lg:block">
+            Whether you’re interested in collaborating, have a project idea, or
+            just want to say hi, I’d love to hear from you. <br />
+            Feel free to reach out via email or connect with me on my
+            professional channels.
+          </p>
 
           <div className="mt-4">
             <div className="mb-8">
-                <a
-                  href="mailto:davide.colombi04@gmail.com"
-                  className="underline-grow"
-                >
-                  davide.colombi04@gmail.com
-                </a>
+              <a
+                href="mailto:davide.colombi04@gmail.com"
+                className="underline-grow"
+              >
+                davide.colombi04@gmail.com
+              </a>
             </div>
 
             <div className="mb-4">
@@ -55,6 +70,7 @@ export default function Contact() {
                     alt="linkedin"
                     width={20}
                     height={20}
+                    className="pulse-hover lg:w-7 lg:h-7"
                   />
                 </a>
                 <a
@@ -67,10 +83,12 @@ export default function Contact() {
                     alt="github"
                     width={20}
                     height={20}
+                    className="pulse-hover lg:w-7 lg:h-7"
                   />
                 </a>
               </div>
             </div>
+
             <div className="mb-4">
               <div>
                 <strong>Resume</strong>

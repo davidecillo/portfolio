@@ -1,22 +1,10 @@
-import Navbar from "@/components/Navbar";
+import WorksCarousel from "@/components/workscarousel";
 
 export const metadata = {
-  title: "Davide Colombi",
-  description: "Portfolio",
+  title: "Works - Davide Colombi",
+  description: "Explore a curated selection of UX/UI and front-end projects by Davide Colombi.",
 };
 
-export default function Home() {
-  return (
-    <main className="relative h-[100dvh] w-screen overflow-hidden">
-      <Navbar />
-
-      <div className="absolute bottom-4 left-4">
-        <h2 className="title text-6xl font-bold md:text-9xl leading-none">
-          Davide
-          <br />
-          Colombi
-        </h2>
-      </div>
-    </main>
-  );
+export default function Works() {
+  return <WorksCarousel />;
 }
