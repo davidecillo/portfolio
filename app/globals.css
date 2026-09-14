@@ -1,17 +1,8 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Akzidenz-Grotesk BQ";
-  src: url("/fonts/akzidenz/AkzidenzGroteskBQ-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
 :root {
-  --background: #f8f8f8;
-  --foreground: black;
-  --font-title: "Akzidenz-Grotesk BQ", sans-serif;
-  --font-content: "Inter", sans-serif;
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 @theme inline {
@@ -23,116 +14,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #f8f8f8;
-    --foreground: black;
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }
 
 body {
   background: var(--background);
-  color: black !important;
-}
-
-.title {
-  font-family: var(--font-title);
-  color: black;
-}
-
-.content {
-  font-family: var(--font-content);
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollbar-hide {
-  -ms-overflow-style: none; /* IE e Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  background-color: black;
-  border-radius: 9999px;
-  pointer-events: none;
-  z-index: 9999;
-  will-change: transform, width;
-  transition: opacity 150ms linear;
-}
-
-.custom-cursor.hover {
-  width: 25px;
-  height: 25px;
-}
-
-.underline-grow {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.underline-grow::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  background-color: black;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease;
-}
-
-.underline-grow:hover::after {
-  transform: scaleX(1);
-}
-
-@keyframes pulseSocial {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.15);
-    opacity: 0.8;
-  }
-}
-
-.pulse-hover {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.pulse-hover:hover {
-  animation: pulseSocial 1.5s ease-in-out infinite;
-}
-
-@media (max-width: 1023px) {
-  .custom-cursor {
-    display: none;
-  }
-
-  #nav-icon.open span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 0.25rem;
-    left: 0.2rem;
-  }
-
-  #nav-icon.open span:nth-child(2) {
-    width: 0%;
-    opacity: 0;
-  }
-
-  #nav-icon.open span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 1rem;
-    left: 0.2rem;
-  }
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }
